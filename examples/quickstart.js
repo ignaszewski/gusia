@@ -4,17 +4,7 @@ const Wit = require('../').Wit;
 const interactive = require('../').interactive;
 const tts = require('../').tts;
 
-
-const accessToken = (() => {
-        if (process.argv.length !== 3) {
-    console.log('usage: node examples/quickstart.js <wit-access-token>');
-    process.exit(1);
-}
-return process.argv[2];
-})();
-
-// Quickstart example
-// See https://wit.ai/ar7hur/quickstart
+const accessToken = 'RFRGXQZMN3CZPGAI5CG7FZYVY2LNUF4Z';
 
 const firstEntityValue = (entities, entity) => {
     const val = entities && entities[entity] &&
@@ -40,7 +30,7 @@ const actions = {
     },
     getForecast({context, entities}) {
         return new Promise(function(resolve, reject) {
-            var location = firstEntityValue(entities, 'location')
+            let location = firstEntityValue(entities, 'location');
             if (location) {
                 context.forecast = 'sunny in ' + location; // we should call a weather API here
                 delete context.missingLocation;
@@ -54,4 +44,13 @@ const actions = {
 };
 
 const client = new Wit({accessToken, actions});
+
+
+// exports.parseResult = function (err, resp, body) {
+//     console.log(body);
+// };
+
 interactive(client);
+
+
+

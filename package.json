@@ -18,13 +18,16 @@
   "repository": "https://github.com/ignaszewski/gusia",
   "author": "Michał Ignaszewski",
   "dependencies": {
+    "@google-cloud/speech": "^0.4.1",
     "co": "^4.6.0",
     "es6-promise": "^4.0.5",
     "exists-file": "^3.0.0",
     "google-tts-api": "0.0.1",
     "isomorphic-fetch": "^2.2.1",
     "mpg123": "^0.2.1",
-    "node-uuid": "^1.4.7"
+    "node-record-lpcm16": "^0.1.4",
+    "node-uuid": "^1.4.7",
+    "request": "^2.79.0"
   },
   "engines": {
     "node": ">=4.0.0"
