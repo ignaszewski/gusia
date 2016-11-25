@@ -1,7 +1,7 @@
 'use strict';
 
 const Wit = require('../').Wit;
-const interactive = require('../').interactive;
+const voice = require('../').voice;
 const tts = require('../').tts;
 
 const accessToken = 'RFRGXQZMN3CZPGAI5CG7FZYVY2LNUF4Z';
@@ -45,7 +45,7 @@ const actions = {
 
 const client = new Wit({accessToken, actions});
 
-interactive(client);
+voice(client);
 
 
 
