@@ -8,10 +8,9 @@ const accessToken = 'RFRGXQZMN3CZPGAI5CG7FZYVY2LNUF4Z';
 
 const firstEntityValue = (entities, entity) => {
     const val = entities && entities[entity] &&
-            Array.isArray(entities[entity]) &&
-            entities[entity].length > 0 &&
-            entities[entity][0].value
-        ;
+        Array.isArray(entities[entity]) &&
+        entities[entity].length > 0 &&
+        entities[entity][0].value;
     if (!val) {
         return null;
     }
@@ -22,14 +21,14 @@ const actions = {
     send(request, response) {
         const {sessionId, context, entities} = request;
         const {text, quickreplies} = response;
-        return new Promise(function(resolve, reject) {
+        return new Promise(function (resolve, reject) {
             console.log('sending...', JSON.stringify(response));
             tts(response.text);
             return resolve();
         });
     },
     getForecast({context, entities}) {
-        return new Promise(function(resolve, reject) {
+        return new Promise(function (resolve, reject) {
             let location = firstEntityValue(entities, 'location');
             if (location) {
                 context.forecast = 'sunny in ' + location; // we should call a weather API here
