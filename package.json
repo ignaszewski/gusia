@@ -26,8 +26,9 @@
     "isomorphic-fetch": "^2.2.1",
     "mpg123": "^0.2.1",
     "node-record-lpcm16": "^0.1.4",
-    "node-wit": "^4.3.0",
+    "node-spotify-helper": "^0.4.7",
     "node-uuid": "^1.4.7",
+    "node-wit": "^4.3.0",
     "request": "^2.79.0"
   },
   "engines": {
